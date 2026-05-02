@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0d1117;
+  --bg-elevated: #111826;
+  --panel: #161f30;
+  --panel-soft: #1d2a42;
+  --text: #e6edf3;
+  --muted: #9fb0c3;
+  --primary: #45c4ff;
+  --primary-strong: #24aee8;
+  --danger: #ff6b79;
+  --border: #2d3a50;
+  --success: #5be37a;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 800px at 15% -20%, rgba(69, 196, 255, 0.16), transparent 60%),
+    radial-gradient(1200px 800px at 90% -10%, rgba(70, 132, 255, 0.1), transparent 50%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(69, 196, 255, 0.25);
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(159, 176, 195, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 176, 195, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
